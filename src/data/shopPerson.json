@@ -1,0 +1,57 @@
+[
+	{
+		"id": 1,
+		"image": "person1",
+		"country": "France",
+		"language": "French",
+		"prof_job": "Culture and Heritage",
+		"price": 6.99,
+		"annatation": "The guide has been curated with care by French reporters, correspondents and researchers. It explores France’s rich heritage, and introduces you to the designers, artists and chefs creating at the forefront of today's culture. Think of it as having coffee with your smart and trusted friend living in Paris.",
+		"work": ["Local Writers", "Major Topics", "Etiquette Tips", "Key Facts"],
+		"stars": 0
+	},
+	{
+		"id": 2,
+		"image": "person2",
+		"country": "France",
+		"language": "French",
+		"prof_job": "People and Society",
+		"price": 6.99,
+		"annatation": "This guide has been curated with care by French reporters, correspondents and researchers. It brings you all the social insight you need and helps you understand how French people live, love and work today and why communities are the way they are. Think of it as having coffee with your smart and trusted friend living in Paris.",
+		"work": ["French Writers", "Major Topics", "Etiquette Tips", "Key Facts"],
+		"stars": 0
+	},
+	{
+		"id": 3,
+		"image": "person3",
+		"country": "Germany",
+		"language": "German",
+		"prof_job": "Culture and Heritage",
+		"price": 6.99,
+		"annatation": "The guide has been curated with care by German reporters, correspondents and researchers. It explores Germany’s rich heritage, and introduces you to the designers, artists and chefs creating at the forefront of today's culture. Think of it as having coffee with your smart and trusted friend living in Berlin.",
+		"work": ["German Writers", "Major Topics", "Etiquette Tips", "Key Facts"],
+		"stars": 0
+	},
+	{
+		"id": 4,
+		"image": "person4",
+		"country": "Morocco",
+		"language": "Moroccan",
+		"prof_job": "Culture and Heritage",
+		"price": 6.99,
+		"annatation": "Curated with care by Moroccan reporters, correspondents and researchers. It brings you all the social insight you need and helps you understand how German people live, love and work today and why communities are the way they are. Think of it as having coffee with your smart and trusted friend living in Rabat.",
+		"work": ["Moroccan Writers", "Major Topics", "Etiquette Tips", "Key Facts"],
+		"stars": 0
+	},
+	{
+		"id": 5,
+		"image": "person5",
+		"country": "Germany",
+		"language": "German",
+		"prof_job": "Power and Politics",
+		"price": 6.99,
+		"annatation": "Curated with care by German reporters, correspondents and researchers. It brings you all the social insight you need and helps you understand how German people live, love and work today and why communities are the way they are. Think of it as having coffee with your smart and trusted friend living in Berlin.",
+		"work": ["German Politician", "Major Topics", "Etiquette Tips", "Key Facts"],
+		"stars": 0
+	}
+]

@@ -1,0 +1,61 @@
+.navbar {
+	padding: 15px;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar-left {
+	display: flex;
+	align-items: center;
+	gap: 28px;
+
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 26px;
+}
+
+.navbar-left_item {
+	color: #1c1b1b;
+	text-decoration: none;
+}
+
+.navbar-center {
+	background-image: url('../../image/icon.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 94px;
+	height: 30px;
+	margin-right: 215px;
+	cursor: pointer;
+}
+
+.navbar-right {
+	display: flex;
+	align-items: center;
+	gap: 17px;
+}
+
+.navbar-right_inst,
+.navbar-right_search,
+.navbar-right_cart {
+	background-image: url('../../image/instagram.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 27px;
+	height: 26px;
+	cursor: pointer;
+}
+
+.navbar-right_search {
+	background-image: url('../../image/search.png');
+	width: 46px;
+	height: 49px;
+}
+
+.navbar-right_cart {
+	background-image: url('../../image/cart.png');
+	width: 39px;
+	height: 46px;
+}
