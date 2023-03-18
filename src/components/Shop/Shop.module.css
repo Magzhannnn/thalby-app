@@ -1,0 +1,158 @@
+.shop-person_list {
+	margin: 50px 0;
+	display: flex;
+	align-items: flex-start;
+	gap: 114px;
+	flex-wrap: wrap;
+}
+
+.shop-person_item {
+	text-align: center;
+}
+
+.shop-person1,
+.shop-person2,
+.shop-person3,
+.shop-person4,
+.shop-person5 {
+	background-image: url('../../image/person1.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	width: 316px;
+	height: 429px;
+	cursor: pointer;
+}
+
+.shop-person2 {
+	background-image: url('../../image/person2.png');
+}
+.shop-person3 {
+	background-image: url('../../image/person3.png');
+}
+.shop-person4 {
+	background-image: url('../../image/person4.png');
+}
+.shop-person5 {
+	background-image: url('../../image/person5.png');
+}
+
+.shop-person_title {
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 25px;
+
+	width: 180px;
+	margin: 20px auto;
+	cursor: pointer;
+}
+
+.shop-person_price {
+	font-size: 20px;
+	font-weight: 300;
+	margin-bottom: 15px;
+}
+
+.shop-person_btn {
+	background-color: transparent;
+	border: none;
+	text-decoration: underline;
+
+	font-size: 20px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.shop-europe {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 50px;
+	margin-top: 100px;
+}
+
+.show-europe_left {
+	text-align: right;
+	width: 44%;
+}
+
+.show-europe_title {
+	font-size: 42px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.show-europe_text {
+	font-size: 20px;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+.shop-europe_includes {
+	font-weight: bold;
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+.shop-europe_includes span {
+	font-weight: 300;
+	text-decoration: underline;
+	margin-right: 8px;
+	cursor: pointer;
+}
+
+.shop-europe_collection {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+
+.shop-europe_collection span {
+	padding: 6px 20px;
+	color: white;
+	background-color: black;
+	border-radius: 100px;
+	font-size: 42px;
+	margin-right: 15px;
+}
+
+.shop-europe_price {
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.shop-europe_price span {
+	font-size: 27px;
+	font-weight: bold;
+	margin-right: 15px;
+}
+
+.shop-europe_right {
+	width: 47%;
+	position: relative;
+}
+
+.shop-europe_person1,
+.shop-europe_person3,
+.shop-europe_person4 {
+	background-image: url('../../image/person1.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 339px;
+	height: 463px;
+
+	position: absolute;
+	top: -225px;
+	left: 0;
+	z-index: 1;
+}
+.shop-europe_person3 {
+	background-image: url('../../image/person3.png');
+	left: 135px;
+	z-index: 2;
+}
+.shop-europe_person4 {
+	background-image: url('../../image/person4.png');
+	left: 270px;
+	z-index: 3;
+}
