@@ -1,0 +1,76 @@
+.footer {
+	background-color: #000;
+	padding: 50px 253px;
+	color: #fff;
+
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.footer-icon {
+	background-image: url('../../image/footIcon.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	width: 136px;
+	height: 43px;
+}
+
+.footer-social_media {
+	display: flex;
+	gap: 15px;
+	margin-top: 50px;
+	margin-left: 5px;
+	margin-bottom: 15px;
+}
+
+.foot_facebook,
+.foot_insta1,
+.foot_twitter {
+	background-image: url('../../image/facebook.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	width: 34px;
+	height: 28px;
+}
+.foot_insta1 {
+	background-image: url('../../image/insta1.png');
+}
+.foot_twitter {
+	background-image: url('../../image/twitter.png');
+}
+
+.footer-left_title {
+	font-size: 16px;
+	margin-left: 5px;
+	margin-top: 39px;
+	font-weight: 300;
+}
+
+.footer-right {
+	display: flex;
+	gap: 100px;
+	align-items: flex-start;
+}
+
+.footer-about,
+.footer-contact {
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.footer-about_title,
+.footer-contact_title {
+	cursor: text;
+}
+
+.footer-about_subtitle,
+.footer-about_privacy,
+.footer-about_terms,
+.footer-about_write,
+.footer-contact_email,
+.footer-contact_help {
+	margin-bottom: 10px;
+}
