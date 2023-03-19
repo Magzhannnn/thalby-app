@@ -158,40 +158,6 @@
 	z-index: 3;
 }
 
-.shop-footer {
-	margin-top: 120px;
-	margin-bottom: 80px;
-	text-align: center;
-}
-
-.shop-footer_title {
-	font-size: 42px;
-	font-weight: bold;
-	margin-bottom: 40px;
-	letter-spacing: 2px;
-}
-
-.shop-footer_btn {
-	padding: 10px 30px;
-
-	color: #fff;
-	font-size: 18px;
-	font-weight: bold;
-
-	width: max-content;
-	margin: 0 auto;
-	border-radius: 50px;
-	background-color: #000;
-	border: 1px solid #000;
-	transition: 0.3s all;
-}
-
-.shop-footer_btn:hover {
-	color: #000;
-	cursor: pointer;
-	background-color: #fff;
-}
-
 @media (max-width: 1680px) {
 	.shop-person_list {
 		justify-content: center;
@@ -201,7 +167,24 @@
 
 @media (max-width: 1481px) {
 	.shop-europe {
-		display: none;
+		display: block;
+	}
+
+	.show-europe_left {
+		text-align: center;
+		width: 70%;
+		margin: 0 auto;
+	}
+
+	.shop-europe_right {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.shop-europe_person1,
+	.shop-europe_person3,
+	.shop-europe_person4 {
+		top: 20px;
 	}
 }
 
@@ -228,6 +211,23 @@
 	}
 }
 
+@media (max-width: 800px) {
+	.shop-europe_collection {
+		font-size: 18px;
+	}
+
+	.shop-europe_right {
+		width: 90%;
+	}
+
+	.shop-europe_person1,
+	.shop-europe_person3,
+	.shop-europe_person4 {
+		width: 186px;
+		height: 255px;
+	}
+}
+
 @media (max-width: 600px) {
 	.shop-person1,
 	.shop-person2,
@@ -238,12 +238,7 @@
 		height: 463px;
 	}
 
-	.shop-footer_title {
-		font-size: 25px;
-		margin-bottom: 20px;
-	}
-
-	.shop-footer_btn {
-		font-size: 14px;
+	.shop-europe {
+		display: none;
 	}
 }

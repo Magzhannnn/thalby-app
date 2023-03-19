@@ -12,11 +12,11 @@ const ShopOffEurope = () => {
 		<div className={styles['shop-europe']}>
 			<div className={styles['show-europe_left']}>
 				<div className={styles['show-europe_title']}>
-					Off to Europe? <br /> Check out our European <br /> Culture Collection
+					Off to Europe? Check out our European Culture Collection
 				</div>
 				<div className={styles['show-europe_text']}>
-					Packed with culture, amazing architecture and fascinating <br />{' '}
-					cuisines, Europe is a culture-lover's paradise. Gain a deeper <br />{' '}
+					Packed with culture, amazing architecture and fascinating
+					cuisines, Europe is a culture-lover's paradise. Gain a deeper
 					understanding with these three guides.
 				</div>
 				<div className={styles['shop-europe_includes']}>
