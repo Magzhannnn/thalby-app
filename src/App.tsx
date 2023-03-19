@@ -1,17 +1,15 @@
-import Footer from './components/Footer/Footer'
-import Navbar from './components/Navbar/Navbar'
-import Collections from './pages/Collections'
-import Shop from './pages/Shop'
+import AppRouter from './components/AppRouter';
+import Footer from './components/Footer/Footer';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
-  return (
-    <div>
-      <Navbar />
-      <Shop />
-      {/* <Collections /> */}
-      <Footer />
-    </div>
-  );
+	return (
+		<div>
+			<Navbar />
+			<AppRouter />
+			<Footer />
+		</div>
+	);
 }
 
 export default App;
