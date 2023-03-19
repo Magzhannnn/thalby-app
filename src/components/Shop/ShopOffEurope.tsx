@@ -6,7 +6,7 @@ const ShopOffEurope = () => {
 		.filter(item => item.prof_job === 'Culture and Heritage')
 		.slice(0, 3);
 
-	console.log(uniqueProfJob);
+	// console.log(uniqueProfJob);
 
 	return (
 		<div className={styles['shop-europe']}>

@@ -7,8 +7,8 @@ function App() {
   return (
     <div>
       <Navbar />
-      {/* <Shop /> */}
-      <Collections />
+      <Shop />
+      {/* <Collections /> */}
       <Footer />
     </div>
   );
