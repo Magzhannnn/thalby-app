@@ -1,7 +1,10 @@
 .footer {
 	background-color: #000;
-	padding: 50px 253px;
+}
+
+.footer-wrapper {
 	color: #fff;
+	padding: 50px 0;
 
 	display: flex;
 	align-items: flex-start;
@@ -64,6 +67,7 @@
 .footer-about_title,
 .footer-contact_title {
 	cursor: text;
+	margin-bottom: 50px;
 }
 
 .footer-about_subtitle,
@@ -73,4 +77,44 @@
 .footer-contact_email,
 .footer-contact_help {
 	margin-bottom: 10px;
+}
+
+@media (max-width: 1360px) {
+	.footer-left_title {
+		width: 90%;
+	}
+
+	.footer-about,
+	.footer-contact {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 780px) {
+	.footer-wrapper {
+		display: block;
+	}
+
+	.footer-left {
+		margin-bottom: 50px;
+	}
+
+	.footer-about,
+	.footer-contact {
+		font-size: 12px;
+	}
+
+	.footer-about_title,
+	.footer-contact_title {
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 500px) {
+	.footer-right {
+		gap: 0;
+	}
+	.footer-about {
+		margin-right: 44px;
+	}
 }

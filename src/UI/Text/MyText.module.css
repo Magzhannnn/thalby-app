@@ -7,3 +7,12 @@
 	margin: 0 auto;
 	margin-top: 40px;
 }
+
+
+@media (max-width: 600px) {
+	.my_text {
+		font-size: 22px;
+		line-height: 26px;
+		margin-top: 20px;
+	}
+}

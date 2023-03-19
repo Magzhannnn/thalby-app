@@ -4,7 +4,6 @@ const FooterAbout = () => {
 	return (
 		<div className={styles['footer-about']}>
 			<div className={styles['footer-about_title']}>ABOUT</div>
-			<br /> <br />
 			<div className={styles['footer-about_subtitle']}>About Us</div>
 			<div className={styles['footer-about_privacy']}>Privacy Policy</div>
 			<div className={styles['footer-about_terms']}>Terms and Conditions</div>

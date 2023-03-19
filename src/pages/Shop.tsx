@@ -1,3 +1,4 @@
+import ShopFooter from '../components/Shop/ShopFooter'
 import ShopOffEurope from '../components/Shop/ShopOffEurope'
 import ShopPersonList from '../components/Shop/ShopPersonList'
 import Container from '../UI/Container/Container';
@@ -11,6 +12,7 @@ const Shop = () => {
 			<MyText text='Our thematic country guides are engineered for understanding.' />
 			<ShopPersonList />
 			<ShopOffEurope />
+			<ShopFooter />
 		</Container>
 	);
 };

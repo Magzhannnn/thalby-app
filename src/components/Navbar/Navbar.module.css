@@ -6,6 +6,10 @@
 	justify-content: space-between;
 }
 
+.navbar-left_adapt {
+	display: none;
+}
+
 .navbar-left {
 	display: flex;
 	align-items: center;
@@ -24,7 +28,7 @@
 .navbar-center {
 	background-image: url('../../image/icon.png');
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	width: 94px;
 	height: 30px;
 	margin-right: 215px;
@@ -42,7 +46,7 @@
 .navbar-right_cart {
 	background-image: url('../../image/instagram.png');
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: contain;
 	width: 27px;
 	height: 26px;
 	cursor: pointer;
@@ -58,4 +62,51 @@
 	background-image: url('../../image/cart.png');
 	width: 39px;
 	height: 46px;
+}
+
+@media (max-width: 1280px) {
+	.navbar-center {
+		margin-right: 15px;
+	}
+}
+
+@media (max-width: 960px) {
+	.navbar-center {
+		display: none;
+	}
+}
+
+@media (max-width: 780px) {
+	.navbar-left {
+		gap: 10px;
+		font-size: 14px;
+	}
+
+	.navbar-right {
+		gap: 7px;
+	}
+
+	.navbar-right_search,
+	.navbar-right_cart {
+		width: 27px;
+		height: 26px;
+	}
+
+	.navbar-right_inst {
+		width: 15px;
+		height: 15px;
+	}
+}
+
+@media (max-width: 543px) {
+	.navbar-left {
+		display: none;
+	}
+
+	.navbar-left_adapt {
+		display: block;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+	}
 }
