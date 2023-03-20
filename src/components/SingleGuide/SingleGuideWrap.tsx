@@ -11,7 +11,6 @@ const SingleGuideWrap: React.FC<SingleGuideWrapProps> = ({ person }) => {
 	const series = `The ${person?.country} Series`;
 	const ebook = `Ebook Guide (Epub) - $${person?.price}`;
 	const title = `Thalby Guide to ${person?.language} ${person?.prof_job}`;
-	console.log(person);
 
 	return (
 		<div className={styles['single-guide-wrap']}>
@@ -30,7 +29,7 @@ const SingleGuideWrap: React.FC<SingleGuideWrapProps> = ({ person }) => {
 						</div>
 					))}
 				</div>
-				<div className={styles['single-guide_ebook']}>{ebook}</div>
+				<div className={styles['single-guide_ebook']}><span></span>{ebook}</div>
 				<div className={styles['single-guide_price']}>USD {person?.price}</div>
 				<MyButton
 					title='Add to cart'
