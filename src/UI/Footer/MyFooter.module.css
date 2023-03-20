@@ -11,26 +11,6 @@
 	letter-spacing: 2px;
 }
 
-.footer_btn {
-	padding: 10px 30px;
-
-	color: #fff;
-	font-size: 18px;
-	font-weight: bold;
-
-	width: max-content;
-	margin: 0 auto;
-	border-radius: 50px;
-	background-color: #000;
-	border: 1px solid #000;
-	transition: 0.3s all;
-}
-
-.footer_btn:hover {
-	color: #000;
-	cursor: pointer;
-	background-color: #fff;
-}
 
 @media (max-width: 1481px) {
 	.footer {
@@ -52,9 +32,5 @@
 	.footer_title {
 		font-size: 25px;
 		margin-bottom: 20px;
-	}
-
-	.footer_btn {
-		font-size: 14px;
 	}
 }

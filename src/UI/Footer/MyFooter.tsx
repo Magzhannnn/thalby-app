@@ -1,9 +1,10 @@
+import MyButton from '../Button/MyButton'
 import styles from './MyFooter.module.css';
 
 interface MyFooterProps {
 	footTitle: string;
 	footBtnTitle: string;
-	handleFooterClick?: () => void;
+	handleFooterClick: () => void;
 }
 
 const MyFooter: React.FC<MyFooterProps> = ({
@@ -14,9 +15,7 @@ const MyFooter: React.FC<MyFooterProps> = ({
 	return (
 		<div className={styles['footer']}>
 			<div className={styles['footer_title']}>{footTitle}</div>
-			<div className={styles['footer_btn']} onClick={handleFooterClick}>
-				{footBtnTitle}
-			</div>
+			<MyButton title={footBtnTitle} onClickHandle={handleFooterClick} />
 		</div>
 	);
 };

@@ -14,18 +14,10 @@ const Navbar = () => {
 		<Container className={styles.navbar}>
 			<div className={styles['navbar-left_adapt']}>
 				<select>
-					<option value='Shop'>
-						<Link to={SHOP_ROUTE} className={styles['navbar-left_item']}>
-							Shop
-						</Link>
-					</option>
-					<option value='Collections'>
-						<Link to={COLLECTIONS_ROUTE} className={styles['navbar-left_item']}>
-							Collections
-						</Link>
-					</option>
+					<option value='Shop'>Shop</option>
+					<option value='Collections'>Collections</option>
 					<option value='FreeGuide'>Try a Free Guide</option>
-					<option value='Stories' onSelect={() => navigate(STORIES_ROUTE)}>
+					<option value='Stories' onClick={() => navigate(STORIES_ROUTE)}>
 						Stories
 					</option>
 				</select>
