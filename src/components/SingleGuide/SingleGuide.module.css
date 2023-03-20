@@ -11,6 +11,7 @@
 .single-guide_person3,
 .single-guide_person4,
 .single-guide_person5 {
+	margin-top: 75px;
 	background-image: url('../../image/person1.png');
 	background-repeat: no-repeat;
 	background-size: contain;
