@@ -6,9 +6,18 @@ import {
 	SHOP_ROUTE,
 	STORIES_ROUTE,
 } from '../../utils/consts';
+import { useSelector } from 'react-redux';
+import { selectAllCart } from '../../store/cart/cart-selectors';
+import { useEffect, useState } from 'react';
 
 const Navbar = () => {
+	const [load, setLoad] = useState(false);
 	const navigate = useNavigate();
+	const allCart = useSelector(selectAllCart);
+
+	useEffect(() => {
+		console.log(allCart);
+	}, [allCart]);
 
 	return (
 		<div className={styles.navbar}>
@@ -44,6 +53,13 @@ const Navbar = () => {
 					</a>
 					<div className={styles['navbar-right_search']}></div>
 					<div className={styles['navbar-right_cart']}></div>
+					<div
+						className={
+							allCart.length
+								? `${styles['navbar-right_cart_dot']} ${styles.activate}`
+								: styles['navbar-right_cart_dot']
+						}
+					></div>
 				</div>
 			</Container>
 		</div>

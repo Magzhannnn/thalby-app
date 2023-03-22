@@ -48,6 +48,7 @@
 	display: flex;
 	align-items: center;
 	gap: 17px;
+	position: relative;
 }
 
 .navbar-right_inst,
@@ -71,6 +72,20 @@
 	background-image: url('../../image/cart.png');
 	width: 39px;
 	height: 46px;
+}
+
+.navbar-right_cart_dot {
+	display: none;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	padding: 4px;
+	border-radius: 50px;
+	background-color: #1c1b1b;
+}
+
+.activate {
+	display: block;
 }
 
 @media (max-width: 1280px) {
