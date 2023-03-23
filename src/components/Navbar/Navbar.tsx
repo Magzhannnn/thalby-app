@@ -7,7 +7,7 @@ import {
 	STORIES_ROUTE,
 } from '../../utils/consts';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectAllCart } from '../../store/cart/cart-selectors';
+import { selectAllCart, selectAllCartInfo } from '../../store/cart/cart-selectors';
 import { useEffect, useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 import CartModal from '../CartModal/CartModal';
@@ -17,12 +17,13 @@ const Navbar = () => {
 	const [menu, setMenu] = useState(false);
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
+	const cartInfo = useSelector(selectAllCartInfo)
 	const allCart = useSelector(selectAllCart);
 
 	useEffect(() => {
-		console.log(allCart);
-		localStorage.setItem('carts', JSON.stringify(allCart));
-	}, [allCart]);
+		console.log(cartInfo);
+		// localStorage.setItem('carts', JSON.stringify(allCart));
+	}, [cartInfo]);
 
 	const handleMenu = () => {
 		setMenu(!menu);

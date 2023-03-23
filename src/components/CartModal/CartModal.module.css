@@ -12,13 +12,14 @@
 
 .cart-wrapper {
 	position: absolute;
-	right: -438px;
+	right: -480px;
 	top: 0;
 	bottom: 0;
-	width: 438px;
+	width: 480px;
 	z-index: 200;
 	background-color: #fff;
-	transition: all 1s;
+	transition: right 0.3s;
+  overflow: auto;
 }
 
 .active {
@@ -28,3 +29,112 @@
 .activate {
 	display: block;
 }
+
+.cart-header-wrapper {
+	background-color: lightgray;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.cart-header,
+.cart-footer_content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 0;
+}
+
+.cart-footer_content {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.cart-header_title {
+	font-size: 27px;
+	font-weight: bold;
+}
+
+.cart-header_close {
+	font-size: 35px;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.cart-list {
+	min-height: 560px;
+	padding: 20px 0;
+}
+
+.cart-item {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.cart-item_person1,
+.cart-item_person2,
+.cart-item_person3,
+.cart-item_person4,
+.cart-item_person5 {
+	background-image: url('../../image/person1.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	width: 100px;
+	height: 150px;
+}
+.cart-item_person2 {
+	background-image: url('../../image/person2.png');
+}
+.cart-item_person3 {
+	background-image: url('../../image/person3.png');
+}
+.cart-item_person4 {
+	background-image: url('../../image/person4.png');
+}
+.cart-item_person5 {
+	background-image: url('../../image/person5.png');
+}
+
+.cart-item_title {
+	font-size: 20px;
+	font-weight: 500;
+	margin-bottom: 7px;
+	cursor: pointer;
+}
+
+.cart-item_ebook,
+.cart-item_remove {
+	color: rgb(177, 177, 177);
+	font-size: 18px;
+	font-weight: 300;
+	margin-bottom: 7px;
+}
+
+.cart-item_foot {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.cart-item_remove {
+	cursor: pointer;
+	width: max-content;
+	padding-bottom: 3px;
+	border-bottom: 1px solid rgb(177, 177, 177);
+}
+
+.cart-item_price {
+	width: max-content;
+	font-size: 20px;
+	font-weight: 500;
+	margin-right: 14px;
+}
+
+.cart-footer_btn {
+	margin-bottom: 20px;
+}	

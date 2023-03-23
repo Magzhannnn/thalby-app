@@ -1,4 +1,5 @@
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { visibleToCart } from '../../store/cart/cart-actions'
 import { selectCartVisible } from '../../store/cart/cart-selectors';
 import CartFooter from './CartFooter';
 import CartHeader from './CartHeader';
@@ -6,6 +7,7 @@ import CartList from './CartList';
 import styles from './CartModal.module.css';
 
 const CartModal = () => {
+	const dispatch = useDispatch()
 	const visible = useSelector(selectCartVisible);
 
 	return (
@@ -15,6 +17,7 @@ const CartModal = () => {
 					? `${styles['cart-modal']} ${styles.activate}`
 					: styles['cart-modal']
 			}
+			// onClick={() => dispatch(visibleToCart)}
 		>
 			<div
 				className={
@@ -24,7 +27,7 @@ const CartModal = () => {
 				}
 			>
 				<CartHeader />
-				<hr />
+				<hr style={{ margin: 0 }} />
 				<CartList />
 				<CartFooter />
 			</div>
