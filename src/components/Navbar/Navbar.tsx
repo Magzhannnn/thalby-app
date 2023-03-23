@@ -9,42 +9,59 @@ import {
 import { useSelector } from 'react-redux';
 import { selectAllCart } from '../../store/cart/cart-selectors';
 import { useEffect, useState } from 'react';
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 const Navbar = () => {
-	const [load, setLoad] = useState(false);
+	const [menu, setMenu] = useState(false);
 	const navigate = useNavigate();
 	const allCart = useSelector(selectAllCart);
 
 	useEffect(() => {
 		console.log(allCart);
+		localStorage.setItem('carts', JSON.stringify(allCart));
 	}, [allCart]);
 
 	return (
 		<div className={styles.navbar}>
 			<Container className={styles['navbar-wrapper']}>
-				<div className={styles['navbar-left_adapt']}>
-					<select>
-						<option value='Shop'>Shop</option>
-						<option value='Collections'>Collections</option>
-						<option value='FreeGuide'>Try a Free Guide</option>
-						<option value='Stories' onClick={() => navigate(STORIES_ROUTE)}>
-							Stories
-						</option>
-					</select>
-				</div>
-				<div className={styles['navbar-left']}>
-					<Link to={SHOP_ROUTE} className={styles['navbar-left_item']}>
+				<div
+					className={
+						menu
+							? `${styles['navbar-left']} ${styles.active}`
+							: styles['navbar-left']
+					}
+				>
+					<Link
+						to={SHOP_ROUTE}
+						className={styles['navbar-left_item']}
+						onClick={() => setMenu(!menu)}
+					>
 						Shop
 					</Link>
-					<Link to={COLLECTIONS_ROUTE} className={styles['navbar-left_item']}>
+					<Link
+						to={COLLECTIONS_ROUTE}
+						className={styles['navbar-left_item']}
+						onClick={() => setMenu(!menu)}
+					>
 						Collections
 					</Link>
-					<a href='#' className={styles['navbar-left_item']}>
+					<a
+						href='#'
+						className={styles['navbar-left_item']}
+						onClick={() => setMenu(!menu)}
+					>
 						Try a Free Guide
 					</a>
-					<Link to={STORIES_ROUTE} className={styles['navbar-left_item']}>
+					<Link
+						to={STORIES_ROUTE}
+						className={styles['navbar-left_item']}
+						onClick={() => setMenu(!menu)}
+					>
 						Stories
 					</Link>
+				</div>
+				<div className={styles.mobile_btn} onClick={() => setMenu(!menu)}>
+					{menu ? <AiOutlineClose size={25} /> : <AiOutlineMenu size={25} />}
 				</div>
 				<div className={styles['navbar-center']}></div>
 				<div className={styles['navbar-right']}>
