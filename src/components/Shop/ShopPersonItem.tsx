@@ -21,7 +21,7 @@ const ShopPersonItem: React.FC<ShopPersonItemProps> = ({ shopPerson }) => {
 		navigate(SINGLE_GUIDE);
 	};
 
-	const handleAddToCart = async () => {
+	const handleAddToCart = () => {
 		const addItem: ICart = {
 			id: shopPerson.id,
 			title: title,
