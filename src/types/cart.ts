@@ -9,6 +9,7 @@ export interface ICart {
 export enum CartTypeActions {
 	ADD_TO_CART = 'ADD_TO_CART',
 	REMOVE_TO_CART = 'REMOVE_TO_CART',
+	VISIBLE_TO_CART = 'VISIBLE_TO_CART',
 }
 
 interface addToCart {
@@ -21,4 +22,8 @@ interface removeToCart {
 	payload: number;
 }
 
-export type CartActions = addToCart | removeToCart;
+interface visibleToCart {
+	type: CartTypeActions.VISIBLE_TO_CART;
+}
+
+export type CartActions = addToCart | removeToCart | visibleToCart;

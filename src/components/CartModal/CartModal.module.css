@@ -1,3 +1,30 @@
 .cart-modal {
-	
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+.cart-wrapper {
+	position: absolute;
+	right: -438px;
+	top: 0;
+	bottom: 0;
+	width: 438px;
+	z-index: 200;
+	background-color: #fff;
+	transition: all 1s;
+}
+
+.active {
+	right: 0;
+}
+
+.activate {
+	display: block;
 }

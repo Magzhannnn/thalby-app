@@ -14,7 +14,7 @@ const CartList = () => {
 
 	return (
 		<div className={styles.container}>
-			{cart.map((c: ICart) => (
+			{cart?.map((c: ICart) => (
 				<CartItem cart={c} />
 			))}
 		</div>
