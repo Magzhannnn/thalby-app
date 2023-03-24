@@ -8,7 +8,7 @@ import NavbarRight from './NavbarRight'
 import { useState } from 'react'
 
 const Navbar = () => {
-	const [menu, setMenu] = useState(false);
+	const [isMenu, setIsMenu] = useState(false);
 	// const navigate = useNavigate();
 	// const dispatch = useDispatch();
 	// const cartInfo = useSelector(selectAllCartInfo);
@@ -18,14 +18,14 @@ const Navbar = () => {
 	// }, [cartInfo]);
 
 	const handleMenu = () => {
-		setMenu(!menu);
+		setIsMenu(!isMenu);
 	};
 
 	return (
 		<div className={styles.navbar}>
 			<Container className={styles['navbar-wrapper']}>
-				<NavbarLeft menu={menu} handleMenu={handleMenu} />
-				<NavbarMobileBtn menu={menu} handleMenu={handleMenu} />
+				<NavbarLeft isMenu={isMenu} handleMenu={handleMenu} />
+				<NavbarMobileBtn isMenu={isMenu} handleMenu={handleMenu} />
 				<NavbarCenter />
 				<NavbarRight />
 			</Container>

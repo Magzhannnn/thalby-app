@@ -7,15 +7,15 @@ import {
 } from '../../utils/consts';
 
 interface NavbarLeftProps {
-	menu: boolean;
+	isMenu: boolean;
 	handleMenu: () => void;
 }
 
-const NavbarLeft: React.FC<NavbarLeftProps> = ({ menu, handleMenu }) => {
+const NavbarLeft: React.FC<NavbarLeftProps> = ({ isMenu, handleMenu }) => {
 	return (
 		<div
 			className={
-				menu
+				isMenu
 					? `${styles['navbar-left']} ${styles.active}`
 					: styles['navbar-left']
 			}
