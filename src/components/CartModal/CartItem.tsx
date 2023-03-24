@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { removeToCart } from '../../store/cart/cart-actions';
+import { removeToCart, visibleToCart } from '../../store/cart/cart-actions';
 import { ICart } from '../../types/cart';
 import { SINGLE_GUIDE } from '../../utils/consts';
 import styles from './CartModal.module.css';
@@ -17,6 +17,7 @@ const CartItem: React.FC<CartItemProps> = ({ cart }) => {
 
 	const handleCartItemNaviagte = () => {
 		localStorage.setItem('shopPerson', JSON.stringify(shopPerson));
+		dispatch(visibleToCart)
 		navigate(SINGLE_GUIDE);
 	};
 

@@ -8,7 +8,7 @@ import CartFooter from './CartFooter';
 import CartHeader from './CartHeader';
 import CartList from './CartList';
 import styles from './CartModal.module.css';
-import CartEmpty from './CartEmpty'
+import CartEmpty from './CartEmpty';
 
 const CartModal = () => {
 	const dispatch = useDispatch();
@@ -33,11 +33,13 @@ const CartModal = () => {
 				<CartHeader />
 				<hr style={{ margin: 0 }} />
 				{carts.length ? (
-					<CartList />
+					<>
+						<CartList />
+						<CartFooter />
+					</>
 				) : (
 					<CartEmpty />
 				)}
-				{carts.length ? <CartFooter /> : <></>}
 			</div>
 		</div>
 	);
