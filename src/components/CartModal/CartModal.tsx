@@ -1,14 +1,19 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { visibleToCart } from '../../store/cart/cart-actions'
-import { selectCartVisible } from '../../store/cart/cart-selectors';
+import { visibleToCart } from '../../store/cart/cart-actions';
+import {
+	selectAllCart,
+	selectCartVisible,
+} from '../../store/cart/cart-selectors';
 import CartFooter from './CartFooter';
 import CartHeader from './CartHeader';
 import CartList from './CartList';
 import styles from './CartModal.module.css';
+import CartEmpty from './CartEmpty'
 
 const CartModal = () => {
-	const dispatch = useDispatch()
+	const dispatch = useDispatch();
 	const visible = useSelector(selectCartVisible);
+	const carts = useSelector(selectAllCart);
 
 	return (
 		<div
@@ -17,7 +22,6 @@ const CartModal = () => {
 					? `${styles['cart-modal']} ${styles.activate}`
 					: styles['cart-modal']
 			}
-			// onClick={() => dispatch(visibleToCart)}
 		>
 			<div
 				className={
@@ -28,8 +32,12 @@ const CartModal = () => {
 			>
 				<CartHeader />
 				<hr style={{ margin: 0 }} />
-				<CartList />
-				<CartFooter />
+				{carts.length ? (
+					<CartList />
+				) : (
+					<CartEmpty />
+				)}
+				{carts.length ? <CartFooter /> : <></>}
 			</div>
 		</div>
 	);
