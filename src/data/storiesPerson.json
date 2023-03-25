@@ -1,0 +1,23 @@
+[
+	{
+		"id": 1,
+		"image": "stories1",
+		"fullName": "Camille Muller",
+		"date": "June 8, 2021",
+		"text": "A short conversation with the French landscape designer on gardens, rebellion and clients."
+	},
+	{
+		"id": 2,
+		"image": "stories2",
+		"fullName": "Sonia Kowalewski",
+		"date": "July 22, 2021",
+		"text": "A short profile on the German witch and spiritualist"
+	},
+	{
+		"id": 3,
+		"image": "stories3",
+		"fullName": "Lilly Stoephasius",
+		"date": "June 29, 2021",
+		"text": "A short profile on the German teen pro skater, her gold medals and aspirations."
+	}
+]
