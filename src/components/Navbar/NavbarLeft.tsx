@@ -4,6 +4,7 @@ import {
 	COLLECTIONS_ROUTE,
 	SHOP_ROUTE,
 	STORIES_ROUTE,
+	FREE_GUIDE,
 } from '../../utils/consts';
 
 interface NavbarLeftProps {
@@ -34,9 +35,13 @@ const NavbarLeft: React.FC<NavbarLeftProps> = ({ isMenu, handleMenu }) => {
 			>
 				Collections
 			</Link>
-			<a href='#' className={styles['navbar-left_item']} onClick={handleMenu}>
+			<Link
+				to={FREE_GUIDE}
+				className={styles['navbar-left_item']}
+				onClick={handleMenu}
+			>
 				Try a Free Guide
-			</a>
+			</Link>
 			<Link
 				to={STORIES_ROUTE}
 				className={styles['navbar-left_item']}
