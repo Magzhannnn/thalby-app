@@ -72,6 +72,10 @@
 	height: 500px;
 }
 
+.free-guide_btn {
+	margin: 0;
+}
+
 @media (max-width: 920px) {
 	.free-guide_container {
 		display: block;
