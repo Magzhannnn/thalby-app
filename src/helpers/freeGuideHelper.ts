@@ -13,11 +13,9 @@ export const emptyFormFreeGuide = (personInfo: MyObject) => {
 	for (let key in personInfo) {
 		if (typeof personInfo[key] === 'string' && personInfo[key].trim() === '') {
 			emptyInput[key] = true;
-			// return true; // нашли пустую строку
 		}
 	}
 	return emptyInput;
-	// return false; // не нашли пустых строк
 };
 
 export const isObject = (obj: IEmptyInput) => {
