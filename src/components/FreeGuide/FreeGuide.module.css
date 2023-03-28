@@ -68,6 +68,10 @@
 	width: 100%;
 }
 
+.error::placeholder {
+	color: red;
+}
+
 .free-guide_right {
 	height: 500px;
 }

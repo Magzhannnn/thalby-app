@@ -1,10 +1,20 @@
 import React from 'react';
-import { emptyFormFreeGuide, MyObject } from '../../helpers/freeGuideHelper';
+import {
+	emptyFormFreeGuide,
+	IEmptyInput,
+	isObject,
+	MyObject,
+} from '../../helpers/freeGuideHelper';
 import { IPersonInfo } from '../../types/freeGuide';
 import MyButton from '../../UI/Button/MyButton';
 import styles from './FreeGuide.module.css';
 
 const FreeGuideForm = () => {
+	const [isError, setIsError] = React.useState<IEmptyInput>({
+		fname: false,
+		lname: false,
+		email: false,
+	});
 	const [personInfo, setPersonInfo] = React.useState<MyObject>({
 		fname: '',
 		lname: '',
@@ -24,16 +34,19 @@ const FreeGuideForm = () => {
 	};
 
 	const handleFreeGuide = () => {
-		if (!emptyFormFreeGuide(personInfo)) {
+		const result = emptyFormFreeGuide(personInfo);
+
+		if (!isObject(result)) {
 			setPersonInfo({
 				fname: '',
 				lname: '',
 				email: '',
 			});
+			alert('Your request has been sent! We will send you an email!')
+			setIsError({ fname: false, lname: false, email: false });
 			return;
 		}
-
-		alert('Заполните полностью!');
+		setIsError(prev => ({ ...prev, ...result }));
 	};
 
 	return (
@@ -41,24 +54,36 @@ const FreeGuideForm = () => {
 			<form className={styles['free-guide_form']}>
 				<input
 					type='text'
-					placeholder='First Name'
+					placeholder={isError.fname ? 'Fill in this field' : 'First Name'}
 					value={personInfo.fname}
 					onChange={handleFName}
-					className={styles['guide-first_name']}
+					className={
+						isError.fname
+							? `${styles['guide-first_name']} ${styles['error']}`
+							: styles['guide-first_name']
+					}
 				/>
 				<input
 					type='text'
-					placeholder='Last Name'
+					placeholder={isError.lname ? 'Fill in this field' : 'Last Name'}
 					value={personInfo.lname}
 					onChange={handleLName}
-					className={styles['guide-last_name']}
+					className={
+						isError.lname
+							? `${styles['guide-last_name']} ${styles['error']}`
+							: styles['guide-last_name']
+					}
 				/>
 				<input
 					type='email'
-					placeholder='Email'
+					placeholder={isError.email ? 'Fill in this field' : 'Email'}
 					value={personInfo.email}
 					onChange={handleEmail}
-					className={styles['guide-email']}
+					className={
+						isError.email
+							? `${styles['guide-email']} ${styles['error']}`
+							: styles['guide-email']
+					}
 				/>
 			</form>
 			<MyButton
