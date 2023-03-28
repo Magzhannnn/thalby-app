@@ -21,12 +21,6 @@ export const emptyFormFreeGuide = (personInfo: MyObject) => {
 };
 
 export const isObject = (obj: IEmptyInput) => {
-	console.log(obj);
-	for (let key in obj) {
-		if (obj[key]) {
-			console.log(obj[key]);
-			return true;
-		}
-	}
+	for (let key in obj) if (obj[key]) return true;
 	return false;
 };
